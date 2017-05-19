@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = "douban album downloader",
+    name = "douban album dl",
     version = "0.0.1",
     description = "douban album downloader",
     long_description = "douban album downloader",
@@ -14,5 +14,9 @@ setup(
     license = "MIT",
     scripts = ["bin/douban-album-dl"],
     keywords = "douban dl",
-    packages = find_packages(exclude = ["tests"])
+    packages = find_packages(exclude = ["tests"]),
+    install_requires = [
+        "bs4",
+        "requests"
+    ]
 )
